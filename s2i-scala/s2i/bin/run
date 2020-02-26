@@ -1,0 +1,11 @@
+#!/bin/bash -e
+#
+# S2I run script for the 'scala-openjdk' image.
+# The run script executes the server that runs your application.
+#
+# For more information see the documentation:
+#	https://github.com/openshift/source-to-image/blob/master/docs/builder_image.md
+#
+
+echo "[run] run scala application ..."
+exec java -jar /opt/scala-app/bin/*.jar

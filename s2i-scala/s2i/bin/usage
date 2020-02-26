@@ -1,0 +1,15 @@
+#!/bin/bash -e
+cat <<EOF
+This is the scala-openjdk S2I image:
+To use it, install S2I: https://github.com/openshift/source-to-image
+
+This S2I Image uses sbt assembly (https://github.com/sbt/sbt-assembly) to create a fat jar.
+So your application has to include the assembly sbt plugin.
+
+Sample invocation:
+
+s2i build <source code path/URL> scala-openjdk <application image>
+
+You can then run the resulting image via:
+docker run <application image>
+EOF
